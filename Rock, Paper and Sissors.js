@@ -2,10 +2,10 @@ const userInput = () => {
     Input = prompt('Enter : ');
     Input = Input.toLowerCase();
 
-    if (Input === 'rock' || Input === 'paper' || Input === 'sissors') {
+    if (Input === 'rock' || Input === 'paper' || Input === 'scissors') {
         return Input;
     } else {
-        console.log('Invalid! Enter rock, paper or sissors.')
+        console.log('Invalid! Enter rock, paper or scissors.')
     }
 }
 
@@ -20,7 +20,7 @@ const randomNum = () => {
             num = 'paper';
             break;
         case 3:
-            num = 'sissors';
+            num = 'scissors';
             break;
     }
 }
