@@ -5,8 +5,9 @@ const userInput = () => {
     if (Input === 'rock' || Input === 'paper' || Input === 'scissors') {
         return Input;
     } else {
-        console.log('Invalid! Enter rock, paper or scissors.')
+        console.log('Invalid! Enter rock, paper or scissors.');
     }
+
 }
 
 const randomNum = () => {
@@ -27,36 +28,36 @@ const randomNum = () => {
 
 const matchResults = () => {
 
-    userInput();
-    randomNum();
-    console.log(`You : ${Input}\nComputer : ${num}`);
+    if (userInput()) {
+        randomNum();
+        console.log(`You : ${Input}\nComputer : ${num}`);
 
-    const won = 'You Won';
-    const lose = 'You Lose';
-    const draw = 'Draw';
+        const won = 'You Won';
+        const lose = 'You Lose';
+        const draw = 'Draw';
 
-    if (Input === num) {
-        console.log(draw);
-    } else if (Input === 'rock') {
-        if (num === 'paper') {
-            console.log(lose);
+        if (Input === num) {
+            console.log(draw);
+        } else if (Input === 'rock') {
+            if (num === 'paper') {
+                console.log(lose);
+            } else {
+                console.log(won);
+            }
+        } else if (Input === 'paper') {
+            if (num === 'rock') {
+                console.log(won);
+            } else {
+                console.log(lose);
+            }
         } else {
-            console.log(won);
-        }
-    } else if (Input === 'paper') {
-        if (num === 'rock') {
-            console.log(won);
-        } else {
-            console.log(lose);
-        }
-    } else {
-        if (num === 'rock') {
-            console.log(lose);
-        } else {
-            console.log(won);
+            if (num === 'rock') {
+                console.log(lose);
+            } else {
+                console.log(won);
+            }
         }
     }
 }
 
 matchResults();
-
